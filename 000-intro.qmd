@@ -1,0 +1,232 @@
+---
+title: "Public Finance: Taxation"
+subtitle: Intro
+author: "Hans Martinez"
+institute: "Western University"
+date: today
+date-format: long
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: true
+    incremental: true
+    theme: [simple, theme.scss ]
+    width: 1260
+    height: 700
+    embed-resources: true
+    navigation-mode: linear
+
+---
+
+## What is Public Finance?
+- Field of Economics studying government revenue, expenditure, and debt, and **how these influence the economy**.
+- Governments raise revenue through taxes to fund public services
+    - Both affect the behavoir of economic agents (consumers, firms), 
+    - Alter the structure and functioning of markets
+    - Influence economic growth
+    - Redistribute income across individuals
+- Focus of the course: Microeconomic (individual behavior) and Normative (how things should be; Positive: how things are)
+
+
+
+
+## Current Global Fiscal Policy Debates
+
+- **Taxation of Digital Economy**: How to tax multinational tech companies that operate across borders.
+- **Climate Change Financing**: Debates on funding climate initiatives through taxes or government spending.
+- **Wealth Inequality**: Discussions on progressive taxation to address rising wealth disparities.
+- **Sovereign Debt Management**: Strategies for managing and reducing national debts, especially post-COVID-19.
+
+
+## Taxation of Digital Economy
+
+::: {#fig-mismatch}
+
+![](figs/f1.png)
+
+There is a geographic mismatch between the location of individuals who use digital platforms and the location where those products are developed.
+
+:::
+
+[Source](https://taxfoundation.org/research/all/global/digital-taxation/){.footer}
+
+
+## Taxation of Digital Economy
+
+- Unlike traditional companies, whose profits are taxed at value creation, digital technology companies conduct most transactions **electronically**. 
+- This makes it challenging to capture **where value is created**, what it is, and how to measure it.
+
+## Taxation of Digital Economy
+
+- Additionally, companies are taxed through permanent establishment rules, which are largely based on **physical presence**. 
+- So, while digital technology companies operate virtually all over the globe, their profits are taxed only in the state where they have a physical establishment.
+- What economic effects might this have?
+
+[Source](https://www.brookings.edu/articles/taxing-the-digital-economy-its-complicated/){.footer}
+
+
+## Digital Service Tax (DST) in Canada
+
+- The Digital Services Tax will be effective the 2024 calendar year
+- The DST is a 3% tax on Canadian‑source digital services revenue earned by large domestic and foreign taxpayers
+
+## Digital Service Tax (DST) in Canada
+
+- In‑scope revenue would generally be comprised of Canadian-source digital services revenue arising from:
+    - online marketplace services
+    - online advertising services
+    - social media services
+    - the sale or licensing of user data obtained from an online marketplace, a social media platform or an online search engine
+
+
+[Source](https://www.pwc.com/ca/en/services/tax/publications/tax-insights/dst-act-is-now-law-2024.html#){.footer}
+
+
+## Canada's Fiscal Policy and Taxation Issues
+
+- **Tax System Overhaul**: Calls for a comprehensive review of the Canadian tax system, last overhauled in 1967, to simplify and ensure fairness in taxation.
+- **Carbon Pricing**: Ongoing debates around the effectiveness and fairness of carbon pricing mechanisms in reducing emissions and their economic impact.
+- **Tax Avoidance and Evasion**: Increased focus on combating aggressive tax avoidance, particularly involving offshore entities and digital currencies.
+
+## Canada's Fiscal Policy and Taxation Issues
+
+- **Transfer Pricing**: Scrutiny of cross-border transactions to ensure fair taxation of multinational corporations operating in Canada.
+- **Public Debt Concerns**: Managing rising public debt and interest payments, especially in light of increased government spending on social programs and infrastructure.
+
+
+## Canadian Issue: Carbon Pricing
+
+- Canada’s carbon pricing system is a cornerstone of the country's plan to tackle climate change. 
+
+- However, it faces criticism regarding its economic impact, fairness, and effectiveness in reducing emissions
+
+- Conservative Leader Pierre Poilievre argues against the carbon tax saying it makes current inflation worse
+
+[Source](https://www.canada.ca/en/services/environment/weather/climatechange/climate-action/pricing-carbon-pollution/how-pricing-reduces-emissions.html){.footer}
+
+## What is the Carbon Pricing (Tax)?
+
+- There are two systems for pricing carbon in Canada: the fuel charge applied to consumers, and another system applied to industrial emitters. 
+
+- The April 1 (last) increase amounts to about three cents more per litre of gasoline. 
+
+- By 2030, though, the price on carbon would add nearly 40 cents per litre
+
+- The gradual increases are meant to act as a financial incentive for people and businesses to change their behaviour to burn less fossil fuels and transition to greener forms of energy.
+    - Switch from a gas-powered vehicle to an electric.
+
+[Source](https://www.cbc.ca/news/climate/carbon-tax-controversy-1.7151551){.footer}
+
+
+## Does the Carbon Tax Work?
+
+![](figs/emission-2030.png){fig-align="center"}
+
+[Source](https://440megatonnes.ca/insight/industrial-carbon-pricing-systems-driver-emissions-reductions/){.footer}
+
+## Does the Carbon Tax Work?
+
+- A recent study estimates the the fuel charge will contribute between 8 and 9 percent of avoided emission by 2030
+
+- The industrial-emitter carbon pricing will contribute between 23-39 percent
+
+- Data released in by the Federal Government shows, however, by 2030 the reduction in emissions is expected to be 12 per cent below what emissions would be without carbon pricing
+
+- On the economic side, by 2030 Canada's GDP will be $25 billion lower that it would have been without carbon pricing
+
+## Carbon Rebate
+
+- The carbon tax applies to residents in Newfoundland and Labrador, New Brunswick, Nova Scotia and Prince Edward Island, Ontario, Manitoba, Saskatchewan, Alberta, Yukon and Nunavut.
+
+- Ninety per cent of the government revenues are returned to households in those provinces through a quarterly rebate program, with households receiving a quarterly payment based on family size.
+
+## Carbon Rebate
+
+
+![](figs/carbon-rebate.png){fig-align="center"}
+
+
+[Source](https://www.canada.ca/en/services/environment/weather/climatechange/climate-action/pricing-carbon-pollution/how-pricing-reduces-emissions.html){.footer}
+
+## How Carbon Pricing Works
+
+{{< video https://youtu.be/zD64kaTY5Vg width="100%" height="85%" >}}
+
+# How Does Canada Tax Code Rank?
+
+## International Tax Competitiveness Index
+
+- The Tax Foundation' s International Tax Competitiveness Index (ITCI) measures the degree to which the 38 OECD countries' tax systems promote competitiveness
+
+- The ITCI attempts to display not only which countries provide the best tax environment for investment but also the best tax environment for workers and businesses.
+
+- Canada ranks 15 in the OECD
+
+## 
+
+```{r}
+#| label: fig-can-rank
+#| fig-cap: Canada's Rank at the International Tax Competitive Index
+
+
+library(tidyverse)
+
+can<- read.csv("data/final_categories_2014_2023.csv")
+
+## ploting
+
+can_db <-can %>%
+    group_by(Year) %>%
+    summarise(
+        across(
+            where(is.numeric),
+            mean
+        )
+    ) %>%
+    mutate(
+        Country = "OECD",
+        ISO_2 = "OECD",
+        ISO_3 = "OECD"
+    ) %>% rbind(can)
+
+can_db %>%
+    filter(
+        ISO_3 %in% c("OECD","CAN","USA","EST")
+    )%>%
+    ggplot(
+        aes(x=Year, y=Final.Score, group=factor(ISO_3), fill=factor(ISO_3))
+    ) +
+   geom_line(aes(color=ISO_3))+
+   theme_classic()+
+   theme(legend.title = element_blank(), legend.position = "top")+
+   ggtitle("Canadian Tax System", sub = "International Tax Competitive Index Ranking")
+
+
+
+```
+
+## Sources of Revenue
+
+![](figs/revenue.png){fig-align="center"}
+
+## Corporate Taxation
+
+![](figs/corp-tax.png){fig-align="center"}
+
+[The corporate income tax is a tax on the profits of corporations.]{.footer}
+
+## Consumption Taxes
+
+- Consumption taxes are charged on goods and services and can take various forms. 
+
+- In the OECD and most of the world, the value-added tax (VAT) is the most common consumption tax. 
+
+## Consumption Taxes
+
+![](figs/vat.png){fig-align="center"}
+
+## Taxes in Canada
+
+[Taxes in Canada](https://taxfoundation.org/location/canada/){fig-align="center"}
